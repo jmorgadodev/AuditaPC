@@ -1,0 +1,47 @@
+name: AuditaPC portable release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  portable:
+    runs-on: windows-latest
+    steps:
+      - name: Obtener codigo
+        uses: actions/checkout@v4
+
+      - name: Configurar .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restaurar
+        run: dotnet restore .\AuditaPC.sln
+
+      - name: Ejecutar pruebas
+        run: dotnet test .\AuditaPC.sln -c Release --no-restore --logger "console;verbosity=minimal"
+
+      - name: Publicar EXE portable
+        run: dotnet publish .\src\AuditaPC.App\AuditaPC.App.csproj -c Release -p:PublishProfile=PortableWinX64
+
+      - name: Empaquetar solo archivos públicos
+        shell: pwsh
+        run: .\tools\Build-PortableRelease.ps1 -OutputDirectory (Join-Path $env:RUNNER_TEMP 'release-assets')
+
+      - name: Crear GitHub Release con descarga directa
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $assets = Join-Path $env:RUNNER_TEMP 'release-assets'
+          $zip = Join-Path $assets 'AuditaPC-win-x64-portable.zip'
+          $sha = "$zip.sha256"
+          gh release create $env:GITHUB_REF_NAME $zip $sha --verify-tag --generate-notes --prerelease --title "AuditaPC $env:GITHUB_REF_NAME"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

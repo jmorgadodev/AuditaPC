@@ -1,0 +1,64 @@
+# Datos reales de auditorías: nunca versionar información de clientes.
+# Incluso los ejemplos ficticios se regeneran localmente y NO se agregan a Git.
+/examples/auditoria-ficticia/
+/examples/auditoria-prueba-funcional-*/
+/examples/**/.auditapc-example
+/packaging/**/Auditorias/
+/**/AuditaPC_Portable/
+[Aa]uditorias/
+[Aa]uditoría/
+[Aa]uditorías/
+[Aa]udits/
+[Dd]atos/[Aa]uditorias/
+[Dd]atos/[Aa]uditorías/
+[Rr]eportes/
+[Rr]eports/
+[Ee]videncias/
+[Ee]xportaciones/
+[Ff]otografias/
+[Ff]otografías/
+
+# Configuración local de la aplicación.
+AuditaPC.config.json
+*.config.local.json
+*.audit.lock
+*.lock
+
+# Inventarios y exportaciones generadas con información real.
+INV_*.csv
+SOFT_*.csv
+DET_*.json
+Inventario_Maestro.csv
+Inventario_Historico.csv
+Software_Maestro.csv
+Mapa_Red_Inventario.html
+
+# Compilación, pruebas y publicaciones.
+**/bin/
+**/obj/
+dist/
+publish/
+artifacts/
+TestResults/
+.vs/
+*.user
+*.suo
+*.cache
+*.tmp
+*.tmp-*
+*.bak
+*.log
+
+# Secretos y certificados privados.
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.key
+*.pem
+
+# Archivos del sistema operativo.
+Thumbs.db
+Desktop.ini
+.DS_Store

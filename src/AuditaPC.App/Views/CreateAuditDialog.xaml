@@ -1,0 +1,69 @@
+<Window x:Class="AuditaPC.App.Views.CreateAuditDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Nueva auditoría"
+        Width="560"
+        SizeToContent="Height"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        Background="{StaticResource PaperBrush}"
+        FontFamily="{StaticResource UiFont}"
+        UseLayoutRounding="True"
+        SnapsToDevicePixels="True">
+    <Grid Margin="28">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,22">
+            <TextBlock Text="NUEVA AUDITORÍA" Style="{StaticResource Eyebrow}" />
+            <TextBlock Text="Crear una auditoría independiente" Style="{StaticResource PageTitle}" FontSize="24" Margin="0,4,0,4" />
+            <TextBlock Style="{StaticResource Caption}"
+                       Text="Cada auditoría se guarda en su propia carpeta con un identificador único. No se mezclan datos entre empresas ni fechas." />
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Empresa o cliente *" Style="{StaticResource FieldLabel}" />
+            <TextBox x:Name="CompanyBox" Style="{StaticResource InputTextBox}" MaxLength="120" />
+
+            <Grid Margin="0,16,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="16" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="Técnico" Style="{StaticResource FieldLabel}" />
+                    <TextBox x:Name="TechnicianBox" Style="{StaticResource InputTextBox}" MaxLength="120" />
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                    <TextBlock Text="Fecha de inicio" Style="{StaticResource FieldLabel}" />
+                    <DatePicker x:Name="StartDatePicker" Style="{StaticResource InputDatePicker}" />
+                </StackPanel>
+            </Grid>
+
+            <TextBlock Text="Notas de la auditoría" Style="{StaticResource FieldLabel}" Margin="0,16,0,5" />
+            <TextBox x:Name="NotesBox"
+                     Style="{StaticResource InputTextBox}"
+                     Height="90"
+                     AcceptsReturn="True"
+                     TextWrapping="Wrap"
+                     VerticalScrollBarVisibility="Auto"
+                     MaxLength="2000" />
+
+            <TextBlock x:Name="ErrorText"
+                       Foreground="{StaticResource DangerBrush}"
+                       FontSize="12"
+                       Margin="0,12,0,0"
+                       TextWrapping="Wrap"
+                       Visibility="Collapsed" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,24,0,0">
+            <Button Content="Cancelar" Style="{StaticResource SecondaryButton}" Click="Cancel_Click" IsCancel="True" />
+            <Button Content="Crear auditoría" Style="{StaticResource PrimaryButton}" Click="Create_Click" IsDefault="True" Margin="10,0,0,0" />
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,25 @@
+AuditaPC | Levantamiento técnico e inventario local
+==================================================
+
+VERSIÓN PORTABLE PARA WINDOWS x64
+
+1. Descomprime la carpeta AuditaPC completa en un pendrive o carpeta escribible.
+2. Ejecuta AuditaPC.exe. No necesita instalador ni instalación de .NET.
+3. Crea o abre la auditoría de una empresa.
+4. Captura cada equipo y confirma Guardar captura. El inventario NO se conserva hasta confirmar.
+5. Genera informes HTML, CSV y JSON. En los HTML, el botón "Cómo leer el informe"
+   abre una ayuda independiente, excluida de la impresión.
+6. Cierra AuditaPC y expulsa el pendrive de forma segura antes de retirarlo.
+
+Los datos de auditoría se guardan por defecto en Auditorias, junto a este ejecutable.
+No elimines ni separes la carpeta Auditorias cuando traslades la aplicación.
+Si el USB no permite escritura, comprueba Configuración: puede usarse el perfil local.
+
+AuditaPC trabaja local y offline por defecto; no instala ni administra equipos.
+Windows y Office pueden requerir permisos adicionales para algunas consultas.
+La información de licencias no acredita vigencia contractual de Microsoft 365.
+
+PROTEGE TUS DATOS: informes, nombres de equipo, IP, números de serie y fotografías
+pueden ser confidenciales. Nunca los subas a GitHub.
+
+Documentación y código fuente: repositorio AuditaPC de GitHub (al publicarse).

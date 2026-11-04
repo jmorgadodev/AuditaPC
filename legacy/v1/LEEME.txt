@@ -1,0 +1,47 @@
+INVENTARIO TI PARA WINDOWS - VERSION 1.0
+======================================
+
+REQUISITOS
+- Windows 10 u 11 con Windows PowerShell 5.1 (incluido en Windows).
+- No necesita conexion a Internet ni instalar programas.
+- No necesita ser administrador para la mayor parte de los datos.
+  Algunas consultas de seguridad pueden requerir privilegios o no estar disponibles.
+
+PASO 1 - INVENTARIAR CADA EQUIPO
+1. Copia esta carpeta completa a un pendrive o al computador.
+2. Haz doble clic en Iniciar-Inventario.bat.
+3. Revisa los datos en las pestanas: resumen, RAM, discos, unidades,
+   redes, graficos, monitores, baterias, software y seguridad.
+4. Si corresponde, completa codigo de inventario, responsable, ubicacion
+   y observaciones en la parte superior.
+5. Haz clic en Exportar inventario y elige donde guardar.
+6. Repite en todos los computadores.
+
+SE CREAN 3 ARCHIVOS POR EQUIPO
+- INV_NOMBRE_FECHA.csv: una fila con los datos principales del equipo.
+- SOFT_NOMBRE_FECHA.csv: una fila por programa detectado.
+- DET_NOMBRE_FECHA.json: detalle estructurado completo (tecnico).
+
+PASO 2 - CREAR EL INVENTARIO GENERAL
+1. Reune en una misma carpeta los archivos INV_*.csv y SOFT_*.csv
+   que exportaste desde todos los computadores.
+2. Ejecuta Unificar-Inventarios.bat y selecciona esa carpeta.
+3. Se generan:
+   - Inventario_Maestro.csv: una fila por equipo, con su captura mas reciente.
+   - Inventario_Historico.csv: todas las capturas recolectadas.
+   - Software_Maestro.csv: programas asociados a las capturas vigentes.
+4. Abre los CSV en Excel. Estan codificados en UTF-8 y separados con
+   punto y coma, de uso habitual en Excel configurado para Chile.
+
+NOTAS
+- Todos los datos se obtienen del propio equipo; no se transmiten a la nube.
+- No recoge contrasenas, claves de recuperacion BitLocker ni claves de producto.
+- El software se lee desde el Registro de programas instalados del sistema
+  y del usuario que ejecuta la herramienta. No garantiza listar aplicaciones
+  portables, Microsoft Store ni instalaciones de otros perfiles de usuario.
+- En maquinas virtuales y algunos fabricantes, el serial del BIOS puede ser
+  generico. Para identificar correctamente el activo, rellena Codigo de inventario.
+- Los inventarios son archivos locales: resguardalos segun las normas de tu empresa.
+- El unificador elige la ultima captura por codigo de inventario, si esta informado;
+  de lo contrario usa el numero de serie del BIOS o el nombre del equipo.
+- No altera el sistema, salvo por escribir los archivos en la carpeta elegida.

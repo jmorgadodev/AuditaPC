@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{87EC7C73-72A0-456C-86A0-401F76413CA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuditaPC.Core", "src\AuditaPC.Core\AuditaPC.Core.csproj", "{FB5FF93F-6ADC-4F7F-8A11-F40DD1F0D87E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuditaPC.App", "src\AuditaPC.App\AuditaPC.App.csproj", "{CFCF31DD-86E5-445B-92AB-EC1790DC79BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D308B97F-7E14-4B8B-8B28-AF8D259D94B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuditaPC.Core.Tests", "tests\AuditaPC.Core.Tests\AuditaPC.Core.Tests.csproj", "{0D5968AA-755D-4DFB-81DA-9A8E004DBAC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{4A4780E7-915A-4F74-AF8C-91B624E0CC11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuditaPC.ExampleBuilder", "tools\AuditaPC.ExampleBuilder\AuditaPC.ExampleBuilder.csproj", "{EE03E545-7B93-4EB6-8A1F-944FA7EA4C83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB5FF93F-6ADC-4F7F-8A11-F40DD1F0D87E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB5FF93F-6ADC-4F7F-8A11-F40DD1F0D87E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB5FF93F-6ADC-4F7F-8A11-F40DD1F0D87E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB5FF93F-6ADC-4F7F-8A11-F40DD1F0D87E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFCF31DD-86E5-445B-92AB-EC1790DC79BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFCF31DD-86E5-445B-92AB-EC1790DC79BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFCF31DD-86E5-445B-92AB-EC1790DC79BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFCF31DD-86E5-445B-92AB-EC1790DC79BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D5968AA-755D-4DFB-81DA-9A8E004DBAC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D5968AA-755D-4DFB-81DA-9A8E004DBAC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D5968AA-755D-4DFB-81DA-9A8E004DBAC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D5968AA-755D-4DFB-81DA-9A8E004DBAC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE03E545-7B93-4EB6-8A1F-944FA7EA4C83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE03E545-7B93-4EB6-8A1F-944FA7EA4C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE03E545-7B93-4EB6-8A1F-944FA7EA4C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE03E545-7B93-4EB6-8A1F-944FA7EA4C83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FB5FF93F-6ADC-4F7F-8A11-F40DD1F0D87E} = {87EC7C73-72A0-456C-86A0-401F76413CA5}
+		{CFCF31DD-86E5-445B-92AB-EC1790DC79BD} = {87EC7C73-72A0-456C-86A0-401F76413CA5}
+		{0D5968AA-755D-4DFB-81DA-9A8E004DBAC4} = {D308B97F-7E14-4B8B-8B28-AF8D259D94B4}
+		{EE03E545-7B93-4EB6-8A1F-944FA7EA4C83} = {4A4780E7-915A-4F74-AF8C-91B624E0CC11}
+	EndGlobalSection
+EndGlobal

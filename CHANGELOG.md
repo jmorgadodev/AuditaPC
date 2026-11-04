@@ -26,19 +26,12 @@
 - Protección frente a cancelación de captura, fórmulas CSV y rutas de fotografías no confiables.
 - Perfil de publicación autocontenida `win-x64` e integración continua en Windows.
 
-## 0.1.0-beta.2
+## 1.0.0 — Versión estable
 
-- Primera beta portable publicada en GitHub Releases para Windows x64.
-- ZIP con ejecutable autocontenido, instrucciones, carpeta de auditorías vacía y checksum SHA-256.
-- Documentación MIT/CC BY 4.0 separada y enlaces directos de descarga.
-- Prueba de timeout estabilizada con una señal controlada para evitar resultados dependientes del planificador.
-
-## 0.1.0-beta.1
-
-- Primera versión beta pública de AuditaPC.
-- Aplicación portable para Windows x64, con almacenamiento local y funcionamiento offline por defecto.
-- Auditorías por empresa y fecha, capturas con historial, notas de terreno y fotografías opcionales.
-- Informes HTML individuales y consolidados, CSV y JSON.
-- Ayuda de interpretación HTML independiente del contenido técnico y excluida de impresión.
-- Documentación abierta CC BY 4.0 y código bajo licencia MIT.
-- Paquete portable y checksum SHA-256 generados por el flujo de publicación.
+- Primera versión estable de AuditaPC para Windows x64.
+- Aplicación portable y autocontenida, con almacenamiento local y funcionamiento offline por defecto.
+- Validación de campo en USB FAT32, exFAT y NTFS, con permisos estándar y de administrador.
+- Captura de información del equipo, auditorías por empresa y fecha, historial, notas de terreno y fotografías opcionales.
+- Informes HTML individuales y consolidados, CSV y JSON; ayuda de interpretación HTML independiente y excluida de impresión.
+- Código fuente y ejecutable bajo MIT; documentación bajo CC BY 4.0.
+- ZIP portable y checksum SHA-256 publicados en GitHub Releases.

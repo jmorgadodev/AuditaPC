@@ -20,13 +20,11 @@ Incluye:
 
 No contiene auditorías, capturas, informes, archivos de configuración ni símbolos de depuración. El flujo `.github/workflows/release.yml` genera también el checksum SHA-256.
 
-**Publicado:** beta `v0.1.0-beta.2`, como pre-release. Descarga directa:
+**Publicado:** versión estable `1.0.0`. Descarga directa:
 
-[AuditaPC-win-x64-portable.zip](https://github.com/jmorgadodev/AuditaPC/releases/download/v0.1.0-beta.2/AuditaPC-win-x64-portable.zip)
+[AuditaPC-win-x64-portable.zip](https://github.com/jmorgadodev/AuditaPC/releases/latest/download/AuditaPC-win-x64-portable.zip)
 
-Verificación: [AuditaPC-win-x64-portable.zip.sha256](https://github.com/jmorgadodev/AuditaPC/releases/download/v0.1.0-beta.2/AuditaPC-win-x64-portable.zip.sha256).
-
-La URL `releases/latest/download` se reserva para cuando exista una versión estable; GitHub no trata las pre-releases como la descarga `latest`.
+Verificación: [AuditaPC-win-x64-portable.zip.sha256](https://github.com/jmorgadodev/AuditaPC/releases/latest/download/AuditaPC-win-x64-portable.zip.sha256).
 
 ## Crear un Release
 
@@ -44,11 +42,11 @@ El paquete local queda en `artifacts/releases/`. El script de empaquetado copia 
 Para publicar una versión automatizada:
 
 ```powershell
-git tag v0.1.0-beta.3
-git push origin v0.1.0-beta.3
+git tag v1.0.1
+git push origin v1.0.1
 ```
 
-El workflow se activa al enviar un tag `v*` y publica la versión como pre-release. Restaura, ejecuta las pruebas, publica el EXE, construye el ZIP y crea un GitHub Release con ambos archivos.
+El workflow se activa al enviar un tag `v*`. Restaura, ejecuta las pruebas, publica el EXE, construye el ZIP y crea un GitHub Release estable (sin marcarlo como pre-release) con ambos archivos.
 
 ## Licencias
 

@@ -8,7 +8,7 @@ AuditaPC es una aplicación de escritorio portable para técnicos que realizan l
 
 *Captura real de la aplicación con una auditoría de demostración generada con datos ficticios. No corresponde a un cliente ni a un equipo real.*
 
-> **Estado:** beta pública `v0.1.0-beta.2`. El paquete portable está publicado en GitHub Releases; las pruebas automatizadas pasan en Windows CI. La matriz de compatibilidad física y permisos todavía debe ampliarse.
+> **Estado:** versión estable `1.0.0`. Aplicación portable para Windows x64, probada desde USB FAT32, exFAT y NTFS, con cuentas estándar y de administrador. Las 62 pruebas automatizadas y la compilación Windows CI están aprobadas.
 
 ## Objetivo y límites
 
@@ -54,9 +54,9 @@ La carpeta de auditorías predeterminada es `Auditorias`, directamente junto al 
 
 ## Caso de uso comprobado
 
-En una prueba funcional de campo realizada desde un pendrive FAT32 se guardó una auditoría con **1 equipo y 2 capturas**, y se generaron **6 archivos de informe y exportación**. Se verificó que los JSON fueran legibles y que los archivos de captura conservaran sus hashes SHA-256.
+Las pruebas de campo confirmaron el funcionamiento portable desde unidades USB con sistemas de archivos **FAT32, exFAT y NTFS**, tanto con permisos de usuario estándar como ejecutando con privilegios de administrador. Se comprobó la captura de información del equipo y la persistencia local para el flujo de inventario.
 
-La prueba confirma persistencia básica y generación de exportaciones en ese entorno; **no se midió el tiempo de trabajo ni una reducción de horas**, por lo que no se atribuye un ahorro cuantitativo. Los datos del equipo y los informes reales permanecen fuera del repositorio.
+La herramienta guarda los datos localmente y no envía inventarios a servidores de terceros. Los registros e informes de equipos reales permanecen fuera del repositorio; la demostración pública utiliza datos ficticios.
 
 La captura funciona localmente y sin conexión por defecto. No se envían inventarios a servidores de terceros; la comprobación HTTPS opcional de conectividad con servicios de Microsoft está desactivada por defecto y no transmite claves ni inventarios.
 
@@ -70,17 +70,17 @@ La disponibilidad de BitLocker, TPM, Secure Boot, salud de discos y otros datos 
 
 ## Descarga portable (GitHub Releases)
 
-Descarga **[AuditaPC-win-x64-portable.zip](https://github.com/jmorgadodev/AuditaPC/releases/download/v0.1.0-beta.2/AuditaPC-win-x64-portable.zip)** desde GitHub Releases. Incluye el ejecutable autocontenido, instrucciones, la licencia MIT y una carpeta `Auditorias` vacía. No contiene registros ni informes de las pruebas.
+Descarga **[AuditaPC-win-x64-portable.zip](https://github.com/jmorgadodev/AuditaPC/releases/latest/download/AuditaPC-win-x64-portable.zip)** desde GitHub Releases. Incluye el ejecutable autocontenido, instrucciones, la licencia MIT y una carpeta `Auditorias` vacía. No contiene registros ni informes de las pruebas.
 
-Verifica el archivo con el [checksum SHA-256](https://github.com/jmorgadodev/AuditaPC/releases/download/v0.1.0-beta.2/AuditaPC-win-x64-portable.zip.sha256). La versión publicada actualmente es `v0.1.0-beta.2` (pre-release).
+Verifica el archivo con el [checksum SHA-256](https://github.com/jmorgadodev/AuditaPC/releases/latest/download/AuditaPC-win-x64-portable.zip.sha256). Versión estable: **1.0.0**.
 
 ### Descarga y ejecución en una línea (PowerShell)
 
 ```powershell
-$u='https://github.com/jmorgadodev/AuditaPC/releases/download/v0.1.0-beta.2/AuditaPC-win-x64-portable.zip';$z="$env:TEMP\AuditaPC.zip";$d="$env:LOCALAPPDATA\Programs";Invoke-WebRequest -Uri $u -OutFile $z;Expand-Archive -LiteralPath $z -DestinationPath $d -Force;Start-Process "$d\AuditaPC\AuditaPC.exe"
+$u='https://github.com/jmorgadodev/AuditaPC/releases/latest/download/AuditaPC-win-x64-portable.zip';$z="$env:TEMP\AuditaPC.zip";$d="$env:LOCALAPPDATA\Programs";Invoke-WebRequest -Uri $u -OutFile $z;Expand-Archive -LiteralPath $z -DestinationPath $d -Force;Start-Process "$d\AuditaPC\AuditaPC.exe"
 ```
 
-Este comando descarga y extrae la beta portable en el perfil del usuario; no instala un servicio ni modifica Windows. Cuando se publique una versión estable, se actualizará el enlace a la última versión estable.
+Este comando descarga y extrae la versión estable portable en el perfil del usuario; no instala un servicio ni modifica Windows.
 
 Consulta la [guía de uso](docs/GUIA_USO.md), las [preguntas frecuentes](docs/FAQ.md) y el [procedimiento de publicación](docs/PUBLICACION_GITHUB.md).
 

@@ -43,5 +43,5 @@ jobs:
           $assets = Join-Path $env:RUNNER_TEMP 'release-assets'
           $zip = Join-Path $assets 'AuditaPC-win-x64-portable.zip'
           $sha = "$zip.sha256"
-          gh release create $env:GITHUB_REF_NAME $zip $sha --verify-tag --generate-notes --prerelease --title "AuditaPC $env:GITHUB_REF_NAME"
+          gh release create $env:GITHUB_REF_NAME $zip $sha --verify-tag --generate-notes --title "AuditaPC $env:GITHUB_REF_NAME"
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

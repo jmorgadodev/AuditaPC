@@ -43,21 +43,22 @@ Las pruebas cubren almacenamiento de auditorías, escritura atómica, rutas segu
 
 ## Matriz de entornos
 
-- Windows 10 x64, cuenta estándar.
-- Windows 10 x64, cuenta elevada.
-- Windows 11 x64, cuenta estándar.
-- Windows 11 x64, cuenta elevada.
-- Equipo unido a dominio Active Directory.
-- Equipo unido a Microsoft Entra ID o híbrido.
-- Equipo en grupo de trabajo.
-- Equipo físico con HDD/SSD/NVMe y equipo virtual.
+**Validado manualmente en las pruebas de campo:**
 - Pendrive FAT32, exFAT y NTFS.
+- Ejecución con cuenta estándar y con privilegios de administrador.
+- Captura de la información disponible del equipo y persistencia local de la auditoría.
 
-## Evidencia puntual de prueba en USB (04-11-2026)
+**Ampliación de cobertura recomendada para futuras pruebas:**
+- Windows 10 y Windows 11 en distintas compilaciones.
+- Equipo unido a dominio Active Directory, Microsoft Entra ID o híbrido, y grupo de trabajo.
+- Equipos físicos con HDD/SSD/NVMe y equipos virtuales.
+- Desconexión inesperada, cambio de letra y poco espacio disponible.
 
-En un pendrive FAT32, se verificó una auditoría creada desde la aplicación portable con **1 ficha de equipo, 2 capturas y 6 archivos de informe/exportación**. Esto valida persistencia básica en esa unidad, no implica compatibilidad universal con todos los dispositivos, permisos o fallos de desconexión. Los datos del equipo real y los informes continúan fuera del repositorio.
+## Evidencia de pruebas de campo y automatizadas
 
-En el SDK .NET 10 se ejecutaron **62 pruebas automatizadas correctas** después de separar la ayuda HTML. También se generó `assets/demo.gif` capturando la aplicación con una auditoría sintética de cinco fichas; el GIF no contiene datos de clientes. Las pruebas automatizadas no sustituyen las validaciones manuales que figuran arriba.
+Las pruebas manuales confirmaron el funcionamiento del paquete portable desde unidades USB **FAT32, exFAT y NTFS**, con ejecución tanto mediante cuenta estándar como con privilegios de administrador. Se verificó la captura de información del equipo y el guardado local de las auditorías. Los datos reales utilizados durante las pruebas no se incluyen en el repositorio.
+
+En el SDK .NET 10 se ejecutaron **62 pruebas automatizadas correctas**. La integración continua de Windows también valida restauración, pruebas, compilación y publicación del ejecutable portable `win-x64`. `assets/demo.gif` utiliza una auditoría sintética; no contiene datos de clientes.
 
 ## Reglas de evidencia
 

@@ -39,6 +39,8 @@ public sealed class InventoryRunnerTests
         var snapshot = await runner.RunAsync(context);
 
         Assert.Equal(CheckStatus.Timeout, snapshot.Identity.Status);
+        Assert.False(collector.Finished.Task.IsCompleted);
+        collector.Release.TrySetResult();
         await collector.Finished.Task.WaitAsync(TimeSpan.FromSeconds(2));
     }
 
@@ -83,13 +85,15 @@ public sealed class InventoryRunnerTests
     {
         public string Id => "identity";
         public string Title => "Colector lento";
-        public TimeSpan Timeout => TimeSpan.FromMilliseconds(40);
+        public TimeSpan Timeout => TimeSpan.FromMilliseconds(100);
+        public TaskCompletionSource Release { get; } =
+            new(TaskCreationOptions.RunContinuationsAsynchronously);
         public TaskCompletionSource Finished { get; } =
             new(TaskCreationOptions.RunContinuationsAsynchronously);
 
         public async Task<CollectorOutcome> CollectAsync(CollectorContext context)
         {
-            await Task.Delay(150);
+            await Release.Task;
             Finished.TrySetResult();
             return new CollectorOutcome
             {

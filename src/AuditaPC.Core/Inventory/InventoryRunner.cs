@@ -225,7 +225,10 @@ public sealed class InventoryRunner
                 return;
             }
 
-            if (collectionTask.IsCompleted)
+            // Solo se acepta el resultado si el colector fue la tarea que ganó
+            // la carrera. Comprobar IsCompleted aquí permite aceptar un resultado
+            // tardío si termina entre WhenAny y esta condición.
+            if (completed == collectionTask)
             {
                 var outcome = await collectionTask.ConfigureAwait(false);
                 outcome.Apply(snapshot);

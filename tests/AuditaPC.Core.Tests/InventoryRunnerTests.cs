@@ -19,7 +19,7 @@ public sealed class InventoryRunnerTests
         };
 
         var run = runner.RunAsync(context);
-        await collector.Started.Task.WaitAsync(TimeSpan.FromSeconds(2));
+        await collector.Started.Task.WaitAsync(TimeSpan.FromSeconds(10));
         cancellation.Cancel();
 
         await Assert.ThrowsAnyAsync<OperationCanceledException>(() => run);

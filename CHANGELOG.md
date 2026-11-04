@@ -26,6 +26,13 @@
 - Protección frente a cancelación de captura, fórmulas CSV y rutas de fotografías no confiables.
 - Perfil de publicación autocontenida `win-x64` e integración continua en Windows.
 
+## 0.1.0-beta.2
+
+- Primera beta portable publicada en GitHub Releases para Windows x64.
+- ZIP con ejecutable autocontenido, instrucciones, carpeta de auditorías vacía y checksum SHA-256.
+- Documentación MIT/CC BY 4.0 separada y enlaces directos de descarga.
+- Prueba de timeout estabilizada con una señal controlada para evitar resultados dependientes del planificador.
+
 ## 0.1.0-beta.1
 
 - Primera versión beta pública de AuditaPC.

@@ -15,7 +15,7 @@ Esta carpeta reúne la documentación funcional, operativa y técnica de AuditaP
 - [Pruebas](PRUEBAS.md): comandos, cobertura y validaciones pendientes.
 - [Publicación en GitHub](PUBLICACION_GITHUB.md): flujo de CI, releases y paquete portable.
 - [Decisiones pendientes](DECISIONES_PENDIENTES.md): asuntos que requieren validación o autorización.
-- [Licencia del código](LICENCIA_PENDIENTE.md): estado de la licencia del software.
+- [Licencias](LICENCIAS.md): MIT para el software y CC BY 4.0 para la documentación.
 
 ## Licencia de estos documentos
 

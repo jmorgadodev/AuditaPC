@@ -15,17 +15,18 @@ El artefacto publicado es:
 Incluye:
 - `AuditaPC/AuditaPC.exe`: aplicación autocontenida para Windows x64;
 - `AuditaPC/LEEME.txt`: instrucciones breves;
+- `AuditaPC/LICENSE`: licencia MIT del software;
 - `AuditaPC/Auditorias/`: carpeta vacía para los datos del usuario.
 
 No contiene auditorías, capturas, informes, archivos de configuración ni símbolos de depuración. El flujo `.github/workflows/release.yml` genera también el checksum SHA-256.
 
-**Estado actual:** el repositorio y la documentación están publicados; todavía no existe un Release binario. La descarga directa y el checksum estarán disponibles después de aprobar la licencia del software y publicar el primer tag de versión.
+**Publicado:** beta `v0.1.0-beta.2`, como pre-release. Descarga directa:
 
-Una vez publicado, la URL estable de descarga será:
+[AuditaPC-win-x64-portable.zip](https://github.com/jmorgadodev/AuditaPC/releases/download/v0.1.0-beta.2/AuditaPC-win-x64-portable.zip)
 
-`https://github.com/jmorgadodev/AuditaPC/releases/latest/download/AuditaPC-win-x64-portable.zip`
+Verificación: [AuditaPC-win-x64-portable.zip.sha256](https://github.com/jmorgadodev/AuditaPC/releases/download/v0.1.0-beta.2/AuditaPC-win-x64-portable.zip.sha256).
 
-El checksum SHA-256 se adjuntará al mismo Release.
+La URL `releases/latest/download` se reserva para cuando exista una versión estable; GitHub no trata las pre-releases como la descarga `latest`.
 
 ## Crear un Release
 
@@ -38,13 +39,13 @@ dotnet publish .\src\AuditaPC.App\AuditaPC.App.csproj -c Release -p:PublishProfi
 .\tools\Build-PortableRelease.ps1
 ```
 
-El paquete local queda en `artifacts/releases/`. El script de empaquetado copia únicamente el EXE, las instrucciones y una carpeta de auditorías vacía; valida el contenido del ZIP y calcula SHA-256.
+El paquete local queda en `artifacts/releases/`. El script de empaquetado copia únicamente el EXE, las instrucciones, la licencia MIT y una carpeta de auditorías vacía; valida el contenido del ZIP y calcula SHA-256.
 
 Para publicar una versión automatizada:
 
 ```powershell
-git tag v0.1.0-beta.1
-git push origin v0.1.0-beta.1
+git tag v0.1.0-beta.3
+git push origin v0.1.0-beta.3
 ```
 
 El workflow se activa al enviar un tag `v*` y publica la versión como pre-release. Restaura, ejecuta las pruebas, publica el EXE, construye el ZIP y crea un GitHub Release con ambos archivos.

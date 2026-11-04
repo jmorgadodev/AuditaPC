@@ -14,4 +14,4 @@ Texto legal completo: <https://creativecommons.org/licenses/by/4.0/legalcode>.
 
 Identificador SPDX: `CC-BY-4.0`.
 
-**Esta licencia cubre únicamente la documentación. No concede derechos sobre el código fuente, los binarios, las marcas, los iconos ni otros recursos del programa.** La licencia del software sigue pendiente de una decisión expresa y se explica en [docs/LICENCIA_PENDIENTE.md](docs/LICENCIA_PENDIENTE.md).
+**Esta licencia cubre únicamente la documentación.** El código fuente y el ejecutable se distribuyen bajo MIT, según el archivo [`LICENSE`](LICENSE). Las marcas y los recursos de terceros conservan sus propias condiciones.

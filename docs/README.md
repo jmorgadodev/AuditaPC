@@ -19,4 +19,4 @@ Esta carpeta reúne la documentación funcional, operativa y técnica de AuditaP
 
 ## Licencia de estos documentos
 
-La documentación se publica bajo [CC BY 4.0](../LICENSE-DOCS.md). Esta licencia no se extiende al código fuente ni al ejecutable.
+La documentación se publica bajo [CC BY 4.0](../LICENSE-DOCS.md). El código fuente y el ejecutable se distribuyen bajo [MIT](../LICENSE). Son licencias independientes.

@@ -51,7 +51,7 @@ El workflow se activa al enviar un tag `v*` y publica la versión como pre-relea
 
 ## Licencias
 
-La documentación se distribuye bajo [CC BY 4.0](../LICENSE-DOCS.md). La licencia del código fuente sigue pendiente; consulta [Licencia del código](LICENCIA_PENDIENTE.md). Un repositorio público no implica por sí mismo que el software tenga una licencia de código abierto.
+La documentación se distribuye bajo [CC BY 4.0](../LICENSE-DOCS.md) y el código fuente/ejecutable bajo [MIT](../LICENSE). Las dependencias y recursos de terceros mantienen sus propias licencias y avisos.
 
 ## Revisión de privacidad antes de cada publicación
 

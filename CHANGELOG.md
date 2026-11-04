@@ -25,3 +25,13 @@
 - Migración de la solución a .NET 10 LTS.
 - Protección frente a cancelación de captura, fórmulas CSV y rutas de fotografías no confiables.
 - Perfil de publicación autocontenida `win-x64` e integración continua en Windows.
+
+## 0.1.0-beta.1
+
+- Primera versión beta pública de AuditaPC.
+- Aplicación portable para Windows x64, con almacenamiento local y funcionamiento offline por defecto.
+- Auditorías por empresa y fecha, capturas con historial, notas de terreno y fotografías opcionales.
+- Informes HTML individuales y consolidados, CSV y JSON.
+- Ayuda de interpretación HTML independiente del contenido técnico y excluida de impresión.
+- Documentación abierta CC BY 4.0 y código bajo licencia MIT.
+- Paquete portable y checksum SHA-256 generados por el flujo de publicación.

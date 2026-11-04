@@ -22,4 +22,5 @@ La información de licencias no acredita vigencia contractual de Microsoft 365.
 PROTEGE TUS DATOS: informes, nombres de equipo, IP, números de serie y fotografías
 pueden ser confidenciales. Nunca los subas a GitHub.
 
-Documentación y código fuente: repositorio AuditaPC de GitHub (al publicarse).
+Código fuente y descargas: https://github.com/jmorgadodev/AuditaPC
+Licencia del software: MIT. Documentación: CC BY 4.0.

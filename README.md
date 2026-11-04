@@ -8,7 +8,7 @@ AuditaPC es una aplicación de escritorio portable para técnicos que realizan l
 
 *Captura real de la aplicación con una auditoría de demostración generada con datos ficticios. No corresponde a un cliente ni a un equipo real.*
 
-> **Estado:** pre-release pública `v0.1.0-beta.1`. La herramienta se ha probado desde un pendrive FAT32 y cuenta con pruebas automatizadas; la matriz de compatibilidad física y permisos todavía debe ampliarse.
+> **Estado:** repositorio público en GitHub. La prueba desde un pendrive FAT32 y las pruebas automatizadas están documentadas; la matriz de compatibilidad física y permisos todavía debe ampliarse. El primer paquete descargable de GitHub Releases está pendiente de publicación.
 
 ## Objetivo y límites
 
@@ -70,17 +70,17 @@ La disponibilidad de BitLocker, TPM, Secure Boot, salud de discos y otros datos 
 
 ## Descarga portable (GitHub Releases)
 
-Descarga [AuditaPC-win-x64-portable.zip](https://github.com/jmorgadodev/AuditaPC/releases/download/v0.1.0-beta.1/AuditaPC-win-x64-portable.zip) desde **GitHub Releases**. Descomprime la carpeta completa y ejecuta `AuditaPC.exe`. **No hay instalador ni es necesario instalar .NET** en el equipo auditado.
+El repositorio ya es público, pero el primer paquete portable todavía no está publicado en **GitHub Releases**. La publicación del binario queda pendiente de aprobar la licencia de distribución del programa y ejecutar el flujo de release.
 
-Checksum: [SHA-256](https://github.com/jmorgadodev/AuditaPC/releases/download/v0.1.0-beta.1/AuditaPC-win-x64-portable.zip.sha256).
+Cuando exista un Release, estará disponible en la [página de descargas de AuditaPC](https://github.com/jmorgadodev/AuditaPC/releases). El paquete se llamará `AuditaPC-win-x64-portable.zip` e incluirá el ejecutable autocontenido, instrucciones y una carpeta `Auditorias` vacía. No incluirá registros ni informes de las pruebas.
 
-### Descarga y ejecución en una línea (PowerShell)
+### Descarga y ejecución en una línea (PowerShell, después del primer Release)
 
 ```powershell
-$u='https://github.com/jmorgadodev/AuditaPC/releases/download/v0.1.0-beta.1/AuditaPC-win-x64-portable.zip';$z="$env:TEMP\AuditaPC.zip";$d="$env:LOCALAPPDATA\Programs";Invoke-WebRequest -Uri $u -OutFile $z;Expand-Archive -LiteralPath $z -DestinationPath $d -Force;Start-Process "$d\AuditaPC\AuditaPC.exe"
+$u='https://github.com/jmorgadodev/AuditaPC/releases/latest/download/AuditaPC-win-x64-portable.zip';$z="$env:TEMP\AuditaPC.zip";$d="$env:LOCALAPPDATA\Programs";Invoke-WebRequest -Uri $u -OutFile $z;Expand-Archive -LiteralPath $z -DestinationPath $d -Force;Start-Process "$d\AuditaPC\AuditaPC.exe"
 ```
 
-Este comando descarga y extrae la versión portable en el perfil del usuario; no instala un servicio ni modifica Windows. Si prefieres no ejecutar comandos, descarga el ZIP manualmente desde Releases.
+Este comando quedará operativo después de publicar el primer Release. Descarga y extrae la versión portable en el perfil del usuario; no instala un servicio ni modifica Windows.
 
 Consulta la [guía de uso](docs/GUIA_USO.md), las [preguntas frecuentes](docs/FAQ.md) y el [procedimiento de publicación](docs/PUBLICACION_GITHUB.md).
 
@@ -156,7 +156,7 @@ La salida incluye cinco equipos ficticios (cuatro con captura y una ficha manual
 
 La documentación se publica bajo [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE-DOCS.md). Puedes reutilizar y adaptar los documentos con atribución.
 
-**El código fuente y el ejecutable todavía no tienen una licencia de software concedida.** Que el repositorio sea público no autoriza a copiar, modificar o redistribuir el programa. Consulta [el estado de la licencia del código](docs/LICENCIA_PENDIENTE.md).
+**El código fuente y el ejecutable se distribuyen bajo MIT.** La documentación se distribuye separadamente bajo CC BY 4.0. Consulta [las licencias](docs/LICENCIA_PENDIENTE.md) y los avisos de dependencias de terceros.
 
 ## Documentación
 

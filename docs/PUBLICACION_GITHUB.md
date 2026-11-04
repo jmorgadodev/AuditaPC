@@ -19,11 +19,13 @@ Incluye:
 
 No contiene auditorías, capturas, informes, archivos de configuración ni símbolos de depuración. El flujo `.github/workflows/release.yml` genera también el checksum SHA-256.
 
-Cuando exista un Release publicado, la descarga directa estará disponible en:
+**Estado actual:** el repositorio y la documentación están publicados; todavía no existe un Release binario. La descarga directa y el checksum estarán disponibles después de aprobar la licencia del software y publicar el primer tag de versión.
 
-[Descargar la última versión portable](https://github.com/jmorgadodev/AuditaPC/releases/latest/download/AuditaPC-win-x64-portable.zip)
+Una vez publicado, la URL estable de descarga será:
 
-Checksum: [SHA-256](https://github.com/jmorgadodev/AuditaPC/releases/download/v0.1.0-beta.1/AuditaPC-win-x64-portable.zip.sha256).
+`https://github.com/jmorgadodev/AuditaPC/releases/latest/download/AuditaPC-win-x64-portable.zip`
+
+El checksum SHA-256 se adjuntará al mismo Release.
 
 ## Crear un Release
 

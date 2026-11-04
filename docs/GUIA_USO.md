@@ -4,11 +4,12 @@ AuditaPC permite realizar levantamientos presenciales de computadores Windows. E
 
 ## 1. Descargar y preparar
 
-1. Descarga [AuditaPC-win-x64-portable.zip](https://github.com/jmorgadodev/AuditaPC/releases/latest/download/AuditaPC-win-x64-portable.zip) desde GitHub Releases.
-2. Opcionalmente descarga y verifica el [checksum SHA-256](https://github.com/jmorgadodev/AuditaPC/releases/download/v0.1.0-beta.1/AuditaPC-win-x64-portable.zip.sha256).
-3. Descomprime la carpeta completa `AuditaPC` en el pendrive o en una ubicación escribible.
-4. Ejecuta `AuditaPC.exe`. No requiere instalador ni runtime .NET instalado en el equipo auditado.
-5. La carpeta `Auditorias` se crea junto al ejecutable si no existe. La configuración aparece al guardar preferencias.
+1. Cuando se publique el primer Release, descarga `AuditaPC-win-x64-portable.zip` desde [GitHub Releases](https://github.com/jmorgadodev/AuditaPC/releases).
+2. Descarga el checksum SHA-256 adjunto al mismo Release y verifica el archivo antes de ejecutarlo.
+3. Si todavía no hay un Release disponible, sigue la sección de compilación local del [README](../README.md).
+4. Descomprime la carpeta completa `AuditaPC` en el pendrive o en una ubicación escribible.
+5. Ejecuta `AuditaPC.exe`. No requiere instalador ni runtime .NET instalado en el equipo auditado.
+6. La carpeta `Auditorias` se crea junto al ejecutable si no existe. La configuración aparece al guardar preferencias.
 
 ```text
 AuditaPC/
